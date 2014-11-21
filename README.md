@@ -24,3 +24,22 @@ http://www.amazon.com/dp/1118531647/
 * CodeCombat (Javascript mode)
   http://codecombat.com/
 
+
+# References
+
+## Javascript
+
++ W3Schools
+  http://www.w3schools.com/js/default.asp
+
+## JQuery
+
++ Tutorials
+  http://www.w3schools.com/jquery/default.asp
+
++ API (jQuery functions)
+  http://api.jquery.com/
+
++ Download jquery
+  http://jquery.com/download/
+
