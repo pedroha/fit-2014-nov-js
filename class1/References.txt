@@ -1,0 +1,15 @@
+Code:
+https://github.com/pedroha/fit-2014-nov-js
+
+
+Reference
+
+Javascript
+http://www.w3schools.com/js/
+
+jquery
+http://api.jquery.com/
+
+jquery download
+http://jquery.com/download/
+
