@@ -1,0 +1,41 @@
+<html>
+
+<h1>Hello</h1>
+
+<button id="clickable">Click Me By Id</button>
+
+<script>
+
+	var clickMe = document.getElementById('clickable');
+
+	clickMe.onclick = function() {
+		var favoriteFood = "pizza"; //prompt("What is your favorite food?");
+		var sentence = "I love eating " + favoriteFood;
+
+		document.write(sentence);
+
+		document.write("<p>"
+			+ sentence 
+			+ " contains "
+			+ sentence.length 
+			+ " characters </p>");
+
+		var upper = sentence.toUpperCase() + "<br/>";
+		document.write(upper);
+
+		var lower = sentence.toLowerCase() + "<br/>";
+		document.write(lower);
+
+		document.write(sentence.substring(2, 9) + "<br/>");
+		document.write(sentence.substr(2, 9) + "<br/>");
+
+		// Regular Expression
+		var substituted = sentence.replace(/[aeiou]/g, '');
+
+		document.write(substituted + " ");
+		document.write(substituted.length);
+	};
+
+</script>
+
+</html>
