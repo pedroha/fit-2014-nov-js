@@ -1,0 +1,34 @@
+<select id="currency-select">
+	<option value="EUR">EUROS</option>
+	<option value="USD">USD</option>
+</select>
+
+<script>
+
+	var selection = document.getElementById('currency-select');
+
+	selection.onchange = function() {
+
+		var currency = selection.value;
+		var total = 30;
+
+		var display = "Your awesome total is: ";
+
+		// === : Boolean equal
+
+		var isAmericanDollar = (currency === "USD");
+		if (isAmericanDollar) {
+			display += total; // shortcut of below
+			// display = display + total; // same as above
+		}
+		else {
+			display = display + total/1.5;
+		}
+		display = display + " " + currency;
+
+		alert(display);
+	};
+	
+
+
+</script>

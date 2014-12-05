@@ -1,0 +1,18 @@
+<button id="toggle">Toggle</button>
+
+Status: <div id="trip">mmm</div>
+
+<script>
+
+	var trip = document.getElementById('trip');
+	var toggle = document.getElementById('toggle');
+
+	var readyForTrip = true;
+
+	toggle.onclick = function() {
+		readyForTrip = !readyForTrip; 	// Not operator
+		trip.innerHTML = "Are we ready? " + readyForTrip;
+	};
+
+
+</script>
