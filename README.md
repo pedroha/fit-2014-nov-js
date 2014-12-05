@@ -6,7 +6,7 @@
 ## Books
 
 * Javascript and JQuery: Interactive Front­End Development, Jon Duckett
-(Comprehensive and visual)
+(very visual)
 http://www.amazon.com/dp/1118531647/
 * A Smarter Way to Learn JavaScript, Mark Myers
 (Many tiny bit of examples, lots of exercises)
