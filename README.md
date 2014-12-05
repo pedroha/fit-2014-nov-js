@@ -6,7 +6,7 @@
 ## Books
 
 * Javascript and JQuery: Interactive Front­End Development, Jon Duckett
-(Comprehensive big picture, very visual)
+(Comprehensive and visual)
 http://www.amazon.com/dp/1118531647/
 * A Smarter Way to Learn JavaScript, Mark Myers
 (Many tiny bit of examples, lots of exercises)
@@ -54,11 +54,6 @@ http://www.amazon.com/dp/144934013X
 + MDN DOM Reference (Check the section: HTML element interfaces)
   https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
-## How to keep up with the latest in Javascript?
-+ http://javascriptweekly.com/
-+ http://html5weekly.com/
-+ http://dailyjs.com/
-
 ## JQuery
 
 + Tutorials
@@ -69,4 +64,9 @@ http://www.amazon.com/dp/144934013X
 
 + Download jquery
   http://jquery.com/download/
+
+## How to keep up with the latest in Javascript?
++ http://javascriptweekly.com/
++ http://html5weekly.com/
++ http://dailyjs.com/
 
