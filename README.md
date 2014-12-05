@@ -54,6 +54,11 @@ http://www.amazon.com/dp/144934013X
 + MDN DOM Reference (Check the section: HTML element interfaces)
   https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
+## BOM (Browser Object Model)
+
+  * http://hwang.cisdept.csupomona.edu/cis311/content/bom.htm
+  * http://www.homeandlearn.co.uk/JS/browser_object_model.html
+
 ## JQuery
 
 + Tutorials
