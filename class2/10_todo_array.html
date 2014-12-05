@@ -1,0 +1,35 @@
+<html>
+
+	<h1>My Awesome TODO List</h1>
+
+	<ul id="todo">
+		<li>Travel the world</li>
+	</ul>
+	
+	<script>
+
+		var tasks = [
+			"Kill ebola", 
+			"Win a Nobel Prize", 
+			"Go to the Olympics"
+		];
+
+		var todo = document.getElementById('todo');
+
+		var item;
+
+		item = document.createElement('li');
+		item.innerText = tasks[0];
+		todo.appendChild(item);
+
+		item = document.createElement('li');
+		item.innerText = tasks[1];
+		todo.appendChild(item);
+
+		item = document.createElement('li');
+		item.innerText = tasks[2];
+		todo.appendChild(item);
+
+	</script>
+
+</html>

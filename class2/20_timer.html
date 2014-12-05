@@ -1,0 +1,27 @@
+Number of seconds: <input id="start-counter"></input>
+
+<h1 id="myTimer">Timer</h1>
+
+<script>
+
+	var seconds = 0;
+	var timer = document.getElementById('myTimer');
+
+	var showSeconds = function() {
+		seconds++;
+		timer.innerText = "Seconds passed: " + seconds;
+
+		if (seconds === 10) {
+			alert("10 seconds passed");
+		}
+	};
+
+	setInterval(showSeconds, 1000);
+
+	// Exercises
+	// 1. Down counter (start from 10 and go down), if (seconds < 0) alert('kaboom');
+	// 2. Add an input box where we can set the timer and a button to start the countdown
+	// 3. Use the follow format: mm:ss (minutes and seconds), using seconds = 200.
+	// 4. Implement a chess clock
+
+</script>

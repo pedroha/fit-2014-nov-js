@@ -1,0 +1,45 @@
+<html>
+
+	<h1>My Awesome TODO List</h1>
+
+	Task: <input type="text" id="task"></input>
+	<button id="add">Add to list</button>
+
+	<ul id="todo">
+		<li>Travel the world</li>
+	</ul>
+	
+	<script>
+
+		var listItems = ["Kill ebola", "Win a Nobel Prize", "Go to the Olympics"];
+
+		var todo = document.getElementById('todo');
+		var add = document.getElementById('add');
+		var task = document.getElementById('task');
+
+		// myTask: dynamic value (parameter to function)
+		var addElementToList = function(myTask) {
+			var item = document.createElement('li');
+			item.innerText = myTask;
+			todo.appendChild(item);		
+		};
+
+		for (var i = 0; i < listItems.length; i++) {
+			addElementToList(listItems[i]);			
+			// item = document.createElement('li');
+			// item.innerText = tasks[i];
+			// todo.appendChild(item);
+		}
+
+		add.onclick = function(event) {
+			addElementToList(task.value);			
+			// var item = document.createElement('li');
+			// item.innerText = task.value;
+			// todo.appendChild(item);
+			task.value = "";
+		};
+
+
+	</script>
+
+</html>

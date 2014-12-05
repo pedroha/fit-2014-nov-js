@@ -1,0 +1,41 @@
+<html>
+<style>
+  
+	#square {
+		width: 200px;
+		height: 200px;
+		border: 20px solid red;
+		background-color: pink;
+		transition: 1s;
+	}
+
+	.circle {
+		border-radius: 500px;
+	}
+
+</style>
+
+<div id="square"></div>
+
+<script>
+
+	var block = document.getElementById('square');
+
+	block.className = "circle";
+
+	var isCircle = false;
+
+	var switchShape = function() {
+		if (isCircle) {
+			block.className = "circle";
+		}
+		else {
+			block.className = "";
+		}
+		isCircle = !isCircle;
+	};
+
+	setInterval(switchShape, 2000);
+
+</script>
+</html>
