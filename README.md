@@ -3,10 +3,18 @@
 ### Prerequisites: HTML and CSS
 
 
-## Book
+## Books
 
 * Javascript and JQuery: Interactive Front­End Development, Jon Duckett
+(Comprehensive big picture, very visual)
 http://www.amazon.com/dp/1118531647/
+* A Smarter Way to Learn JavaScript, Mark Myers
+(Many tiny bit of examples, lots of exercises)
+http://www.amazon.com/dp/1497408180/
+* Head First JavaScript Programming
+(Engaging way to learn JS, brain-friendly)
+http://www.amazon.com/dp/144934013X
+
 
 ## Free Online classes
 
@@ -31,6 +39,25 @@ http://www.amazon.com/dp/1118531647/
 
 + W3Schools
   http://www.w3schools.com/js/default.asp
+
++ Mozilla Developer Network
+  https://developer.mozilla.org/en-US/
+
+## DOM (Document Object Model)
+
++ What's the DOM?
+  * http://css-tricks.com/dom/
+  * http://www.quirksmode.org/dom/intro.html
+  * http://www.w3schools.com/js/js_htmldom.asp
+  * https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
++ MDN DOM Reference (Check the section: HTML element interfaces)
+  https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
+## How to keep up with the latest in Javascript?
++ http://javascriptweekly.com/
++ http://html5weekly.com/
++ http://dailyjs.com/
 
 ## JQuery
 
