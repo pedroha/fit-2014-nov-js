@@ -1,11 +1,16 @@
 # CTD 612 55A Javascript. FIT
 
+# Exercises for class2
+
+  + <a href="https://github.com/pedroha/fit-2014-nov-js/blob/master/class2/ex_currency.html">ex_currency.html</a>
+  + <a href="https://github.com/pedroha/fit-2014-nov-js/blob/master/class2/ex_twitter_chars.html">ex_twitter_chars.html</a>
+
 ### Prerequisites: HTML and CSS
 
 
 ## Books
 
-* JS101: JavaScript for Beginners
+* JS101: JavaScript for Beginners, by Kirupa
   http://www.amazon.com/dp/1495327825
 * Javascript and JQuery: Interactive Front­End Development, Jon Duckett
 (very visual)
