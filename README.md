@@ -1,12 +1,11 @@
 # CTD 612 55A Javascript. FIT
 
-<div style="background-color:skyblue">
 # Exercises for class2
 
-  + <a href="https://github.com/pedroha/fit-2014-nov-js/blob/master/class2/ex_currency.html">ex_currency.html</a>
-  + <a href="https://github.com/pedroha/fit-2014-nov-js/blob/master/class2/ex_twitter_chars.html">ex_twitter_chars.html</a>
-
-</div>
+<ul style="background-color:skyblue">
+  <li><a href="https://github.com/pedroha/fit-2014-nov-js/blob/master/class2/ex_currency.html">ex_currency.html</a>
+  <li><a href="https://github.com/pedroha/fit-2014-nov-js/blob/master/class2/ex_twitter_chars.html">ex_twitter_chars.html</a>
+</ul>
 
 ### Prerequisites: HTML and CSS
 
