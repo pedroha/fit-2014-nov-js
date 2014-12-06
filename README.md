@@ -5,6 +5,8 @@
 
 ## Books
 
+* JS101: JavaScript for Beginners
+  http://www.amazon.com/dp/1495327825
 * Javascript and JQuery: Interactive Front­End Development, Jon Duckett
 (very visual)
 http://www.amazon.com/dp/1118531647/
