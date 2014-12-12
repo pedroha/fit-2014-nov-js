@@ -1,0 +1,35 @@
+<style>
+	.penguin {
+		background-color: lime;
+	}
+</style>
+
+<h1>PENGUIN</h1>
+<div class="penguin">
+
+	<img class="" src= "http://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" />	
+
+</div>
+
+
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<script>
+
+	var effects = function() {
+		$(".penguin").slideUp();
+		$(".penguin").slideDown();
+		$(".penguin").fadeOut();
+		$(".penguin").fadeIn();
+		// $(".penguin").hide();
+		// $(".penguin").show();
+	};
+
+	for (var i = 0; i < 5; i++) {
+		effects();
+	}
+
+	// setInterval(effects, 1000); // 2000 milliseconds
+
+</script>
+

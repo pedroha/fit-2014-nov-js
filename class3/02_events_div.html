@@ -1,0 +1,57 @@
+<style>
+	
+	body, html {
+		margin: 0;
+		padding: 0;
+	}
+
+	div {
+		width: 300px;
+		height: 300px;
+		background-color: lime;
+		text-align:center;
+		font-size:96px;
+	}
+
+</style>
+
+More content
+
+<div id="layer">
+	Click Me	
+</div>
+
+<script>
+	
+	var myLayer = document.getElementById('layer');
+
+	myLayer.onclick = function(e) {
+		alert("Clicked coordinates: " + e.clientX + "," + e.clientY);
+	};
+
+	myLayer.onmousedown = function(event) {
+		console.log("Mouse down");
+	}
+
+	var step = 0;
+	myLayer.onmousemove = function(potato) {
+		step++;
+		console.log("Mouse moving..." + step + potato);
+		console.log("Client x,y..." + potato.clientX + "," + potato.clientY);
+		console.log("Screen x,y..." + potato.screenX + "," + potato.screenY);
+	}
+
+	myLayer.onmouseup = function(event) {
+		console.log("Mouse up!!");
+	}
+
+
+</script>
+
+
+
+
+
+
+
+

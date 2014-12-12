@@ -84,3 +84,9 @@ http://www.amazon.com/dp/144934013X
 + http://html5weekly.com/
 + http://dailyjs.com/
 
+## Code Sample Repositories
+
++ http://codepen.io/
++ http://thecodeplayer.com/
++ http://processingjs.org/
+

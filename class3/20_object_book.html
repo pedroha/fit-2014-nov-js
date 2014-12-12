@@ -1,0 +1,22 @@
+<ul id="books">
+	
+</ul>
+
+<script src="jquery.js"></script>
+
+<script>
+	
+	var book = {
+		title: 'A Smarter Way to Learn Javascript',
+		image: 'http://ecx.images-amazon.com/images/I/51fuxWUUIpL._AA160_.jpg'
+	};
+
+	var template = '<h1>$title</h1> <img src="$image-src">';
+
+	var content = template.replace('$title', book.title).replace('$image-src', book.image);
+
+	$('#books').append(content);
+	// $('#books').append(content);
+	// $('#books').append(content);
+
+</script>

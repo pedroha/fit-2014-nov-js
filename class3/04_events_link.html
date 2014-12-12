@@ -1,0 +1,18 @@
+
+<a id="link" href="http://www.google.com">Let's search with Google. Google is your friend</a>
+
+<script>
+	
+	var myLink = document.getElementById('link');
+
+	myLink.onclick = function(e) {
+		//e.preventDefault();
+		
+		alert("Let's go to google!");
+
+		window.open('http://www.google.com')
+
+		return false; // cancel default event!
+	};
+
+</script>

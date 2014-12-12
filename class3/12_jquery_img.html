@@ -1,0 +1,31 @@
+<style>
+
+	img {
+		outline: 4px solid red;
+	}
+
+	.outline {
+		outline: 4px solid lime;
+	}
+
+</style>
+
+<div id="container"></div>
+
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<!-- <script src="jquery.js"></script> -->
+
+<script>
+
+	var url = "http://3.bp.blogspot.com/-iYBrH39xyvM/UNjz0zRt_II/AAAAAAAAADI/XLf408TsJHE/s1600/1323116063042.jpg";
+
+	var htmlContent = '<img src="' + url + '" width="300" height="300">';
+
+	// Equivalent as: document.getElementById('container')
+	$('#container').html(htmlContent);
+
+	// html(): http://api.jquery.com/html/
+
+</script>
+
+

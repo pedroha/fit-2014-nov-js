@@ -1,0 +1,60 @@
+<style>
+
+	img {
+		outline: 4px solid red;
+		display: block;
+	}
+
+	.outline {
+		outline: 4px solid lime;
+	}
+
+</style>
+
+
+<img src="http://ecx.images-amazon.com/images/I/51JVrb7W4IL._AA160_.jpg" width="160" height="160">
+
+<img src="http://ecx.images-amazon.com/images/I/51JVrb7W4IL._AA160_.jpg" width="160" height="160">
+
+
+<script>
+
+	// Example of dynamic HTML using DOM
+	
+	var img2 = document.createElement('img');
+//	img2.src = "http://ecx.images-amazon.com/images/I/51fuxWUUIpL._AA160_.jpg";
+
+	img2.src = "http://3.bp.blogspot.com/-iYBrH39xyvM/UNjz0zRt_II/AAAAAAAAADI/XLf408TsJHE/s1600/1323116063042.jpg"
+	img2.width = 300;
+	img2.height = 300;
+
+	// The browser provides the "onload" event for all Images
+
+	img2.onload = function() {
+//		alert('image is loaded');
+		img2.className = "outline";
+	};
+
+	document.body.appendChild(img2);
+
+
+
+	var img3 = document.createElement('img');
+//	img2.src = "http://ecx.images-amazon.com/images/I/51fuxWUUIpL._AA160_.jpg";
+
+	img3.src = "http://3.bp.blogspot.com/-iYBrH39xyvM/UNjz0zRt_II/AAAAAAAAADI/XLf408TsJHE/s1600/1323116063042.jpg"
+	img3.width = 300;
+	img3.height = 300;
+	document.body.appendChild(img3);
+
+
+</script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<style>
+	
+	.moving {
+		position: absolute; 
+		top: 20px;
+		left: 200px;
+	}
+
+</style>
+
+<img class="background" src="http://1.bp.blogspot.com/-Kd15MA8dwEU/UZsMdDIt7uI/AAAAAAAABCg/iyMH-ryhM_Q/s1600/haunted-house+(1).jpg">
+
+<img class="moving witch" src="http://www.sylvangrovehoa.com/images/flying_20witch_20animated.gif">
+
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<script>
+
+	 $('.witch').delay(1000).animate( { top: 0, left: 400 } )
+				.delay(1000).animate( { top: 200, left: 100 } )
+
+	 $('.background').on('click', function(e) {
+	 	console.log(e.clientX, e.clientY);
+
+	 	$('.witch').delay(1000).animate(
+	 		{ top: e.clientY, left: e.clientX }
+	 	);
+	 });
+
+</script>
+
