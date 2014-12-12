@@ -1,0 +1,45 @@
+<ul id="books">
+	
+</ul>
+
+<script src="jquery.js"></script>
+
+<script>
+
+	var books = [
+		{
+			title: 'A Smarter Way to Learn Javascript',
+			image: 'http://ecx.images-amazon.com/images/I/51fuxWUUIpL._AA160_.jpg'
+		},
+		{
+			title: 'Javascript for Beginners',
+			image: 'http://ecx.images-amazon.com/images/I/51JVrb7W4IL._AA160_.jpg'
+		},
+		{
+			title: 'A Smarter Way to Learn Javascript',
+			image: 'http://ecx.images-amazon.com/images/I/51fuxWUUIpL._AA160_.jpg'
+		},
+		{
+			title: 'Javascript for Beginners',
+			image: 'http://ecx.images-amazon.com/images/I/51JVrb7W4IL._AA160_.jpg'
+		}		
+	];
+	
+	var getContent = function(book) {
+		var template = '<li><h1>$title</h1>' + 
+					   ' <img src="$image-src"></li>';
+
+		var content = template
+			.replace('$title', book.title)
+			.replace('$image-src', book.image);
+
+		return content;
+	};
+
+	for (var i = 0; i < books.length; i++) {
+		var content = getContent(books[i]);
+		$('#books').append(content);		
+	}
+
+
+</script>
