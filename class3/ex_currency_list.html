@@ -1,0 +1,83 @@
+<h1> Currency converter </h1>
+
+<ul>
+   <li>Given the <b>currrencyRates</b> object of currencies, create the options for the select <b>currency-select</b> (which is currently empty)
+   	<li>Add the logic to compute the conversion after selecting the option or clicking on <b>Compute</b>
+</ul>
+
+
+Amount: <input id="amount"></input> USD
+
+convert to
+<select id="currency-select">
+</select>
+
+<button id="compute">Compute</button>
+
+<script>
+
+	var currencyRates = {
+		"EUR": { label: "Euros", rate: 0.80 },
+		"YEN": { label: "Yen", rate: 121.5 },
+		"CAD": { label: "Canadian Dollars", rate: 1.16 },
+		"BGP": { label: "British Pound Sterling", rate: 0.64 },
+		"AUD": { label: "Australian Dollars", rate: 1.21 }
+	};
+
+	// Demo on how to access the fields in the currencyRates object
+	console.log(currencyRates["EUR"]["label"], currencyRates["EUR"]["rate"]);
+	console.log(currencyRates["CAD"]["label"], currencyRates["CAD"]["rate"]);
+	console.log(currencyRates["AUD"]["label"], currencyRates["AUD"]["rate"]);
+
+	var computeTotal = function() {
+
+		var currency = selection.value;
+		var total = amountBox.value;
+		var display = "Your awesome total is: ";
+
+		// === : Boolean equal
+
+		var isJapaneseYen = (currency === "YEN");
+		var isEuro = (currency === "EURO");
+
+		var isAmericanDollar = (currency === "USD");
+		if (isAmericanDollar) {
+			display += total; // shortcut of below
+			// display = display + total; // same as above
+		}
+		else if (isJapaneseYen) {
+			display = display + total * YEN_RATE;			
+		}
+		else if (isEuro) {
+			display = display + total * EURO_RATE;
+		}
+		display = display + " " + currency;
+
+		alert(display);
+	};
+
+	var computeButton = document.getElementById('compute');
+
+	computeButton.onclick = computeTotal;
+
+	var selection = document.getElementById('currency-select');
+	var amountBox = document.getElementById('amount');
+
+	selection.onchange = computeTotal;
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
