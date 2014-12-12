@@ -11,12 +11,18 @@
 		image: 'http://ecx.images-amazon.com/images/I/51fuxWUUIpL._AA160_.jpg'
 	};
 
+	var book2 = {
+		title: 'Javascript for Beginners',
+		image: 'http://ecx.images-amazon.com/images/I/51JVrb7W4IL._AA160_.jpg'
+	};
+
+
 	var template = '<h1>$title</h1> <img src="$image-src">';
 
 	var content = template.replace('$title', book.title).replace('$image-src', book.image);
-
 	$('#books').append(content);
-	// $('#books').append(content);
-	// $('#books').append(content);
+
+	var content = template.replace('$title', book2.title).replace('$image-src', book2.image)
+	$('#books').append(content);
 
 </script>
