@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas fillStyle</title>
+</head>
+<body>
+
+	<canvas id="canvas" width="150" height="150"></canvas>
+
+	<script>
+	// Based on: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
+
+	var ctx = document.getElementById('canvas').getContext('2d');
+
+	var fillRectangle = function(i, j) {
+		ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
+		Math.floor(255-42.5*j) + ',0)';
+		ctx.fillRect(j*25,i*25,25,25);
+	};
+
+	var drawBlocks = function() {
+		for (var i=0;i<6;i++) {
+			for (var j=0;j<6;j++) {
+				fillRectangle(i, j);
+			}
+		}
+	};
+
+	drawBlocks();
+
+	</script>
+</body>
+</html>

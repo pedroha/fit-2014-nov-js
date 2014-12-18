@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio Loops</title>
+</head>
+<body>
+
+	<script>
+
+		var context = new webkitAudioContext();
+
+		var A = {
+			freq: 440,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+		var B = {
+			freq: 513.3,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+		var C = {
+			freq: 550,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+		var D = {
+			freq: 623.3,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+		var E = {
+			freq: 660,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+
+		var F = {
+			freq: 733,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+		var G = {
+			freq: 806,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+		var A2 = {
+			freq: 880,
+			type: 0,
+
+			play: function() {
+				if (this.oscillator) this.stop();
+				this.oscillator = context.createOscillator();
+		    	this.oscillator.connect(context.destination);
+		    	this.oscillator.frequency.value = this.freq;
+				this.oscillator.noteOn(0);
+			},
+			stop: function() {
+				this.oscillator.disconnect(0);
+				this.oscillator = null;
+			}
+		};
+
+	</script>
+	
+</body>
+</html>

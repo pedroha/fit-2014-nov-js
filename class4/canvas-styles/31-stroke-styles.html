@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas strokeStyle</title>
+</head>
+<body>
+
+	<canvas id="canvas" width="150" height="150"></canvas>
+
+	<script>
+	// Based on: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
+
+	var ctx = document.getElementById('canvas').getContext('2d');
+
+	var strikeCircle = function(i, j) {
+        ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' + 
+                         Math.floor(255-42.5*j) + ')';
+        ctx.beginPath();
+        ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
+        ctx.stroke();
+	};
+
+	var drawCircles = function() {
+		for (var i=0;i<6;i++) {
+			for (var j=0;j<6;j++) {
+				strikeCircle(i, j);
+			}
+		}
+	};
+
+	drawCircles();
+
+	</script>
+</body>
+</html>

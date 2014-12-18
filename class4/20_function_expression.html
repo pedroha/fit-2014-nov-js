@@ -1,0 +1,28 @@
+<script>
+
+	console.log("Area: " + area(10, 50));
+	console.log("Volume: " + volume(10, 50, 10));
+
+	// Function expression: we can NOT call them before the definition!
+	
+	var area = function(width, height) {
+		var total = width * height;
+		return total;
+	};
+
+	var volume = function(width, height, depth) {
+		var total = width * height * depth;
+		return total;
+	};
+
+	// we cannot access the variables inside a function (they are private)
+	console.log("Width: ", width);
+	console.log("Total: " , total);
+
+	// Functions can take parameters
+	// Functions can return *values* [boolean, number, string, object, array, function]
+
+	// All DOM event handlers are defined as functions with an event object
+	// DOM event handlers: onclick, onkeypress, onmousedown
+
+</script>

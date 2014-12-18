@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio Loops</title>
+</head>
+<body>
+
+	<script>
+
+		// http://patorjk.com/blog/2012/07/22/tone-playing-experiment-with-html5s-web-audio-api/
+
+		var context = new webkitAudioContext(),
+		    oscillators = [], num = 5, ii;
+
+
+		for (ii = 0; ii < num; ii++) {
+		    oscillators[ii] = context.createOscillator();
+		    oscillators[ii].type = 0;
+		    oscillators[ii].frequency.value = 2000 + ii * 200;
+		}
+
+		var connectIt = function(ii) {
+		    oscillators[ii].connect(context.destination);
+		    oscillators[ii].noteOn && oscillators[ii].noteOn(0);
+		    ii++;
+		    if (ii < num) {
+		        setTimeout(function() {connectIt(ii);}, 400);
+		    } else {
+		        setTimeout(function() {
+		            for (var jj = 0; jj < num; jj++) {
+		                oscillators[jj].disconnect();
+		            }
+		        }, 400);
+		    }
+		}
+
+		connectIt(0);
+
+	</script>
+	
+</body>
+</html>

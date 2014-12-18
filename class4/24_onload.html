@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hyperlink onload</title>
+
+	<script>
+
+		window.onload = function() {
+			alert("5. ONLOAD");
+		};
+
+		alert("1. HEAD");
+
+	</script>
+
+	<script>
+
+		window.onload = function() {
+			alert("6. ONLOAD");
+		};
+
+		window.addEventListener('load', function() {
+			alert("7. ADD EVENT LISTENER");
+		});
+
+	</script>
+</head>
+<body>
+	<script>
+		alert("2. BODY TOP");
+	</script>
+
+	<h1>Hello World</h1>
+
+	<script>
+		alert("3. BODY BOTTOM");
+
+		window.addEventListener('load', function() {
+			alert("8. ADD EVENT LISTENER");
+		});
+
+		window.addEventListener('load', function() {
+			alert("9. ADD EVENT LISTENER");
+		});
+	</script>
+
+	<h1>BYE BYE WORLD</h1>
+
+</body>
+
+<script>
+	alert("4. BODY CLOSING");
+</script>
+
+</html>

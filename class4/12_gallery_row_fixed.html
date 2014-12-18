@@ -1,0 +1,65 @@
+<style>
+
+	ul, li {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* http://davidwalsh.name/remove-whitespace-inline-block */
+	ul {
+		list-style-type: none;
+		width: 1650px;
+		letter-spacing: -4px;
+	}
+
+	li {
+		display: inline-block;
+		width: 275px;
+		letter-spacing: 0;
+	}
+	
+	img {		
+		width: 100%;
+/*		width: 275px;
+		height: 183px;
+*/	}
+
+	.viewport {
+		outline: 2px solid red;
+		width: 275px;
+		height: 183px;
+		overflow: visible;
+		position: relative;
+	}
+
+	ul {
+		position: absolute;
+		top: 0;
+		left: -275px;
+	}
+
+</style>
+
+<div class="viewport">
+	<ul>
+		<li>
+			<img src="images/1.jpg">
+		</li>
+		<li>
+			<img src="images/2.jpg">
+		</li>
+		<li>
+			<img src="images/3.jpg">
+		</li>
+		<li>
+			<img src="images/4.jpg">
+		</li>
+		<li>
+			<img src="images/5.jpg">
+		</li>
+		<li>
+			<img src="images/6.jpg">
+		</li>
+	</ul>
+</div>
+

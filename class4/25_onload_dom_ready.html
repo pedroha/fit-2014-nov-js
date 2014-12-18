@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hyperlink onload</title>
+
+	<script src="jquery.js"></script>
+
+	<script>
+
+		var setupLink = function() {
+			var link = document.getElementById('my-link');
+
+			link.onclick = function() {
+				alert("Thanks for clicking me!"); // Maybe popup a reveal Modal?
+
+				// Hijack the link
+				document.location = "http://google.com";
+				return false;
+			};
+		};
+
+		$(function() {
+			alert("onDom ready")
+			setupLink();
+		});
+
+		$(window).on('load', function() {
+			alert("Window.onload()");
+		})
+
+		$(document).ready(function() {
+			alert("onDom ready 2")
+			setupLink();
+		});
+
+		$(document).on('ready', function() {
+			alert("onDom ready 3")
+			setupLink();
+		});
+
+	</script>
+</head>
+<body>
+
+	<a id="my-link" href="http://microsoft.com">Let's go to Microsoft</a>
+
+</body>
+</html>
