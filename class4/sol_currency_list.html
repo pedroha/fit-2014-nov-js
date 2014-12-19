@@ -1,0 +1,72 @@
+<h1> Currency converter </h1>
+
+<ul>
+   <li>Given the <b>currrencyRates</b> object of currencies, create the options for the select <b>currency-select</b> (which is currently empty)
+   	<li>Add the logic to compute the conversion after selecting the option or clicking on <b>Compute</b>
+</ul>
+
+
+Amount: <input id="amount"></input> USD
+
+convert to
+<select id="currency-select">
+	<option value="EUR">Euros</option>
+	<option value="YEN">Yen</option>
+	<option value="CAD">Canadian Dollars</option>
+	<option value="BGP">British Pound Sterling</option>
+	<option value="AUD">Australian Dollars</option>
+</select>
+
+<button id="compute">Compute</button>
+
+<script src="jquery.js"></script>
+<script>
+
+	var currencyRates = {
+		"EUR": { label: "Euros", rate: 0.80 },
+		"YEN": { label: "Yen", rate: 121.5 },
+		"CAD": { label: "Canadian Dollars", rate: 1.16 },
+		"BGP": { label: "British Pound Sterling", rate: 0.64 },
+		"AUD": { label: "Australian Dollars", rate: 1.21 }
+	};
+
+	// Demo on how to access the fields in the currencyRates object
+	var euro = currencyRates["EUR"];
+	var euroLabel = euro["label"];
+	var euroRate = euro["rate"];
+	console.log(euroLabel, euroRate);
+
+	console.log(currencyRates["CAD"]["label"], currencyRates["CAD"]["rate"]);
+	console.log(currencyRates["AUD"]["label"], currencyRates["AUD"]["rate"]);
+
+	var computeTotal = function() {
+
+		var currency = selection.value;
+
+		console.log(currencyRates[currency]);
+
+		var currencyRate = currencyRates[currency];
+
+		var total = amountBox.value * currencyRate['rate'];
+		var display = "Your awesome total is: " + total;
+		
+		display = display + " " + currencyRate['label'];
+
+		alert(display);
+	};
+
+	var computeButton = document.getElementById('compute');
+
+	computeButton.onclick = computeTotal;
+
+	var selection = document.getElementById('currency-select');
+	var amountBox = document.getElementById('amount');
+
+	selection.onchange = computeTotal;
+
+</script>
+
+
+
+
+
