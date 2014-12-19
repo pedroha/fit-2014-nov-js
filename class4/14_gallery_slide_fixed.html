@@ -78,15 +78,15 @@
 	};
 
 	var slideRight = function() {
-		if (current < count-1) {
-			current++;
+		if (current > 0) {
+			current--;
 			updatePosition();			
 		}
 	};
 
 	var slideLeft = function() {
-		if (current > 0) {
-			current--;
+		if (current < count-1) {
+			current++;
 			updatePosition();			
 		}
 	};

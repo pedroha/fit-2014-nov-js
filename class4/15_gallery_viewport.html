@@ -82,25 +82,25 @@
 	};
 
 	var slideRight = function() {
-		if (current < count-1) {
-			current++;
-			updatePosition();			
-		}
-	};
-
-	var slideLeft = function() {
 		if (current > 0) {
 			current--;
 			updatePosition();			
 		}
 	};
 
+	var slideLeft = function() {
+		if (current < count-1) {
+			current++;
+			updatePosition();			
+		}
+	};
+
 	$('.previous').on('click', function() {
-		slideLeft();
+		slideRight();
 	});
 	
 	$('.next').on('click', function() {
-		slideRight();
+		slideLeft();
 	});
 	
 

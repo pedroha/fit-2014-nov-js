@@ -70,13 +70,13 @@
 	var current = 0;
 
 	var slideRight = function() {
-		current++;
+		current--;
 		var nextLeft = -275 * current;
 		$ul.animate({ left: nextLeft });
 	};
 
 	var slideLeft = function() {
-		current--;
+		current++;
 		var nextLeft = -275 * current;
 		$ul.animate({ left: nextLeft });
 	}
