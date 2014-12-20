@@ -1,5 +1,13 @@
 # CTD 612 55A Javascript. FIT
 
+# Solutions for the class have been uploaded!
+
+<a href="https://github.com/pedroha/fit-2014-nov-js/tree/master/exercises">List of solutions</a>
+
+Or you can download all the class material (including the solution to the exercises)
+<a href="https://github.com/pedroha/fit-2014-nov-js/archive/master.zip">ZIP download</a>
+
+
 # Exercises for class3
 
 <ul style="background-color:skyblue">
