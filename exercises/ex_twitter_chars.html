@@ -1,0 +1,37 @@
+<style>
+   #warning {
+      outline: 2px solid red;
+   }
+</style>
+
+<h1> Twitter characters left </h1>
+
+<ul>
+	<li>Open the Developer Chrome's Developer Console, and type inside the textarea and check the console</li>
+	<li>Whenever we type, update the count in <b>counter</b> (right now, it's always 140)</li>
+	<li>If we reach more than 140 characters, then chop the last character and display a message underneath with a warning: 'reached over 140 characters'</li>
+</ul>
+
+<textarea id="tweet" cols="30" rows="10"></textarea>
+
+<p>
+	<span id="counter">140</span> characters left.
+	<div id="warning"></warning>
+</p>
+
+<script>
+
+	var tweet = document.getElementById('tweet');
+	var counter = document.getElementById('counter');
+
+	tweet.onkeyup = function() {
+		var text = tweet.value;
+		console.log(text);
+		// Q: How do we get the length of the string?
+
+		// Hint: use innerText? or innerHTML?
+	};
+
+
+</script>
+

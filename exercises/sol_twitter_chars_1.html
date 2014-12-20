@@ -1,0 +1,44 @@
+<style>
+   .warning {
+      outline: 2px solid red;
+   }
+</style>
+
+<h1> Twitter characters left </h1>
+
+<ul>
+	<li>Open the Developer Chrome's Developer Console, and type inside the textarea and check the console</li>
+	<li>Whenever we type, update the count in <b>counter</b> (right now, it's always 140)</li>
+	<li>If we reach more than 140 characters, then chop the last character and display a message underneath with a warning: 'reached over 140 characters'</li>
+</ul>
+
+<textarea id="tweet" cols="30" rows="10"></textarea>
+
+<p>
+	<span id="counter">140</span> characters left.
+	<div id="warning"></warning>
+</p>
+
+<script>
+
+	var tweet = document.getElementById('tweet');
+	var counter = document.getElementById('counter');
+	var warning = document.getElementById('warning');
+
+	var MAX_CHARACTERS = 140;
+
+	tweet.onkeyup = function() {
+
+		warning.innerHTML = ""; // Clear the warning messages (if there was one)
+
+		var text = tweet.value;
+		// console.log(text);
+
+		counter.innerHTML = MAX_CHARACTERS - text.length;
+
+		// Comment: We can still go negative!
+	};
+
+
+</script>
+

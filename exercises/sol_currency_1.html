@@ -1,0 +1,62 @@
+<h1> Currency converter </h1>
+
+<ul>
+   <li>Right now, the <b>total</b>  variable has a value of 30. Instead of 30, recover the value from the <b>amount</b> input field</li>
+   <li>Add another currency, say "YEN" and compute into the yen currency according to this formula: USD * 121.50</li>
+   <li>Right now, we compute only after <b>selection.onchange</b>, let's compute also when we press the <b>Compute</b> button</li>
+   <li>For each numeric rate, create a variable to hold this value (hint: choose a good name)</li>
+</ul>
+
+
+Amount: <input id="amount" value="60"></input> USD
+
+convert to
+<select id="currency-select">
+	<option value="EUR">EUROS</option>
+	<option value="USD">USD</option>
+	<option value="YEN">YEN</option>
+</select>
+
+<button id="compute">Compute</button>
+
+<script>
+
+	var selection = document.getElementById('currency-select');
+	var myAmount = document.getElementById('amount');
+	var computeButton = document.getElementById('compute');
+
+	var YEN_RATE = 121.50;
+	var EURO_RATE = 0.81;
+
+	var computeTotal = function() {
+
+		var currency = selection.value;
+
+		var total = myAmount.value;
+
+		var display = "Your awesome total is: ";
+
+		// === : Boolean equal
+		var isYen = (currency === "YEN");
+		var isAmericanDollar = (currency === "USD");
+
+		if (isAmericanDollar) {
+			display += total; // shortcut of below
+			// display = display + total; // same as above
+		}
+		else if (isYen) {
+			display = display + total * YEN_RATE;
+		}
+		else {
+			display = display + total * EURO_RATE;
+		}
+		display = display + " " + currency;
+
+		alert(display);
+	};
+
+	computeButton.onclick = computeTotal;
+
+	selection.onchange = computeTotal;
+	
+</script>

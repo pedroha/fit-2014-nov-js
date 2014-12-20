@@ -1,0 +1,95 @@
+<h1> Currency converter </h1>
+
+<ul>
+   <li>Given the <b>currrencyRates</b> object of currencies, create the options for the select <b>currency-select</b> (which is currently empty)
+   	<li>Add the logic to compute the conversion after selecting the option or clicking on <b>Compute</b>
+</ul>
+
+
+Amount: <input id="amount"></input> USD
+
+convert to
+<select id="currency-select">
+</select>
+
+<button id="compute">Compute</button>
+
+<script>
+
+	var currencyRates = {
+		"EUR": { label: "Euros", rate: 0.80 },
+		"YEN": { label: "Yen", rate: 121.5 },
+		"CAD": { label: "Canadian Dollars", rate: 1.16 },
+		"BGP": { label: "British Pound Sterling", rate: 0.64 },
+		"AUD": { label: "Australian Dollars", rate: 1.21 }
+	};
+
+	// Demo on how to access the fields in the currencyRates object
+	console.log(currencyRates["EUR"]["label"], currencyRates["EUR"]["rate"]);
+	console.log(currencyRates["CAD"]["label"], currencyRates["CAD"]["rate"]);
+	console.log(currencyRates["AUD"]["label"], currencyRates["AUD"]["rate"]);
+
+	var computeButton = document.getElementById('compute');
+	var selection = document.getElementById('currency-select');
+	var amountBox = document.getElementById('amount');
+
+	var euroOption = document.createElement('option');
+	euroOption.value = 'EUR';
+	euroOption.innerText = currencyRates['EUR']['label'];
+	selection.appendChild(euroOption);
+
+	var yenOption = document.createElement('option');
+	yenOption.value = 'YEN';
+	yenOption.innerText = currencyRates['YEN']['label'];
+	selection.appendChild(yenOption);
+
+	var canOption = document.createElement('option');
+	canOption.value = 'CAD';
+	canOption.innerText = currencyRates['CAD']['label'];
+	selection.appendChild(canOption);
+
+	var bgpOption = document.createElement('option');
+	bgpOption.value = 'BGP';
+	bgpOption.innerText = currencyRates['BGP']['label'];
+	selection.appendChild(bgpOption);
+
+	var audOption = document.createElement('option');
+	audOption.value = 'AUD';
+	audOption.innerText = currencyRates['AUD']['label'];
+	selection.appendChild(audOption);
+
+	var computeTotal = function() {
+
+		var display = "Your awesome total is: ";
+		var currency = selection.value;
+		var total = amountBox.value;
+
+		var selectedCurrency = currencyRates[currency];
+		console.log(selectedCurrency);
+
+		var convertedValue = total * selectedCurrency['rate'];
+		display += convertedValue + " " + currency;
+
+		alert(display);
+	};
+
+	computeButton.onclick = computeTotal;
+
+	selection.onchange = computeTotal;
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

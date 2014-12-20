@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart</title>
+	<style>
+		.input {
+			outline: 2px solid yellow;
+		}
+		.output {
+			outline: 2px solid lime;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Compute total for shopping cart</h1>
+
+	<ol>
+		<li>Implement the logic to compute correctly the totals outlined in green boxes from the inputs outlined in yellow boxes</li>
+		<li>Rewrite the Javascript code using jquery selectors (Hint: check out the <b>$.val()</b>) <a href="http://www.w3schools.com/jquery/html_val.asp">w3schools</a> <a href="http://api.jquery.com/val/">jquery</a> </li>
+	</ol>
+
+	<table>
+		<tr>
+			<td>Product Description</td>
+			<td>Price</td>
+			<td>Quantity</td>
+			<td>Total</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="book-description" value="Book"></input></td>
+			<td><input type="text" id="book-price" class="input"></input></td>
+			<td><input type="text" id="book-quantity" class="input"></input></td>
+			<td><input type="text" id="book-total" class="output"></input></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="cup-description" value="Cup"></input></td>
+			<td><input type="text" id="cup-price" class="input"></input></td>
+			<td><input type="text" id="cup-quantity" class="input"></input></td>
+			<td><input type="text" id="cup-total" class="output"></input></td>
+		</tr>
+	</table>
+
+	<button id="computeButton">Compute Total</button>
+
+	<p>Total: <span id="total" class="output"></span></p>
+
+	<script>
+
+		var button = document.getElementById('computeButton');
+		var total = document.getElementById('total');
+
+		button.onclick = function() {
+			var bookPrice = document.getElementById('book-price');
+			var bookQuantity = document.getElementById('book-quantity');
+			var bookTotal = document.getElementById('book-total');
+
+			var cupPrice = document.getElementById('cup-price');
+			var cupQuantity = document.getElementById('cup-quantity');
+			var cupTotal = document.getElementById('cup-total');
+
+			bookTotal.value = parseInt(bookPrice.value) * parseInt(bookQuantity.value);
+			cupTotal.value = parseInt(cupPrice.value) * parseInt(cupQuantity.value);
+
+			total.innerHTML = parseInt(bookTotal.value) + parseInt(cupTotal.value); // Let's use parseInt()		};
+		};
+
+	</script>
+
+</body>
+</html>

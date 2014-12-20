@@ -1,0 +1,78 @@
+<style>
+
+	h1, p {
+		margin: 0;
+		padding: 0;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	ul li {
+		width: 200px;
+		background-color: skyblue;
+	}
+
+	p {
+		background-color: lime;
+	}
+
+	.active {
+		outline: 2px solid red;
+	}
+
+</style>
+
+<h1>Implement an Accordion</h1>
+
+<ol>
+	<li>When I click on an &lt;h1&gt;, slideUp() all &lt;p&gt; </li>
+	<li>When I click on an &lt;h1&gt;, slideDown() the &lt;p&gt; right below the &lt;p&gt; I clicked </li>
+</ol>
+
+<ul>
+	<li>
+		<h1>Title #1</h1>
+		<p>A very long lore ipsum paragraph
+		A very long lore ipsum paragraph
+		A very long lore ipsum paragraph</p>
+	</li>
+	<li>
+		<h1>Title #2</h1>
+		<p>A very long lore ipsum paragraph
+		A very long lore ipsum paragraph
+		A very long lore ipsum paragraph</p>
+	</li>
+	<li>
+		<h1>Title #3</h1>
+		<p>A very long lore ipsum paragraph
+		A very long lore ipsum paragraph
+		A very long lore ipsum paragraph</p>
+	</li>
+</ul>
+
+
+<script src="jquery.js"></script>
+
+<script>
+
+	// Implement an accordion widget:
+	// Whenever we click on an <h1>, we want to slideUp() all the <p>
+	// and slideDown() the <p> right below the <h1> that was clicked
+
+	// $('p').hide();
+
+	$('h1').on('click', function() {
+
+		$('p').removeClass('active');
+		// Write code to slideUp() all the paragrahps
+
+		var $paragraph = $(this).closest('li').find('p');
+		$paragraph.addClass("active");
+
+		// Write code to slide down the corresponding paragraph
+		// $paragraph........
+	});
+
+</script>

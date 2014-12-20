@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart</title>
+	<style>
+		.input {
+			outline: 2px solid yellow;
+		}
+		.output {
+			outline: 2px solid lime;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Compute total for shopping cart</h1>
+
+	<ol>
+		<li>Implement the logic to compute correctly the totals outlined in green boxes from the inputs outlined in yellow boxes</li>
+		<li>Rewrite the Javascript code using jquery selectors (Hint: check out the <b>$.val()</b>) <a href="http://www.w3schools.com/jquery/html_val.asp">w3schools</a> <a href="http://api.jquery.com/val/">jquery</a> </li>
+	</ol>
+
+	<table>
+		<tr>
+			<td>Product Description</td>
+			<td>Price</td>
+			<td>Quantity</td>
+			<td>Total</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="book-description" value="Book"></input></td>
+			<td><input type="text" id="book-price" class="input"></input></td>
+			<td><input type="text" id="book-quantity" class="input"></input></td>
+			<td><input type="text" id="book-total" class="output"></input></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="cup-description" value="Cup"></input></td>
+			<td><input type="text" id="cup-price" class="input"></input></td>
+			<td><input type="text" id="cup-quantity" class="input"></input></td>
+			<td><input type="text" id="cup-total" class="output"></input></td>
+		</tr>
+	</table>
+
+	<button id="computeButton">Compute Total</button>
+
+	<p>Total: <span id="total" class="output"></span></p>
+
+	<script src="jquery.js"></script>
+
+	<script>
+
+		var $button = $('#computeButton');
+		var $total = $('#total');
+
+		$button.on('click', function() {
+
+			var $bookPrice = $('#book-price');
+			var $bookQuantity = $('#book-quantity');
+			var $bookTotal = $('#book-total');
+
+			var bookPriceValue = parseInt($bookPrice.val());
+			var bookQuantityValue = parseInt($bookQuantity.val());
+
+			var bookTotalValue = bookPriceValue * bookQuantityValue;
+			$bookTotal.val(bookTotalValue);
+
+
+			var $cupPrice = $('#cup-price');
+			var $cupQuantity = $('#cup-quantity');
+			var $cupTotal = $('#cup-total');
+
+			var cupPriceValue = parseInt($cupPrice.val());
+			var cupQuantityValue = parseInt($cupQuantity.val());
+
+			var cupTotalValue = cupPriceValue * cupQuantityValue;
+			$cupTotal.val(cupTotalValue);
+
+
+			var totalValue = bookTotalValue + cupTotalValue;
+			$total.html(totalValue);
+
+		});
+
+		// Comment: 
+		// 1. What if we have 100 items, should we copy-paste all the code for 100 items?
+		// 2. Do you see some pattern? A pattern where the only difference is "book" and "cup"
+
+		var computeItemTotal = function(item) {
+			var $price = $('#' + item '-price');
+			var $quantity = $('#' + item + '-quantity');
+			var $total = $('#' + item + '-total');
+
+			var priceValue = parseInt($price.val());
+			var quantityValue = parseInt($quantity.val());
+			var totalValue = priceValue * quantityValue;
+			
+			$total.val(totalValue);
+
+			return totalValue;
+		};
+
+
+	</script>
+
+</body>
+</html>
